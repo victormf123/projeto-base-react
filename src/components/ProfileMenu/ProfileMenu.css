@@ -1,0 +1,143 @@
+.profile-menu {
+  position: relative;
+}
+
+.profile-menu__trigger {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 12px;
+  color: #334155;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  padding: 5px 8px;
+}
+
+.profile-menu__trigger:hover,
+.profile-menu__trigger[aria-expanded="true"] {
+  background: #f5f8f7;
+}
+
+.profile-menu__trigger:focus-visible,
+.profile-menu__item:focus-visible {
+  outline: 2px solid #16836a;
+  outline-offset: 2px;
+}
+
+.profile-menu__avatar {
+  background: #dcebe6;
+  border: 1px solid #d5e4de;
+  border-radius: 50%;
+  height: 36px;
+  object-fit: cover;
+  width: 36px;
+}
+
+.profile-menu__name {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.profile-menu__chevron {
+  color: #718078;
+}
+
+.profile-menu__dropdown {
+  animation: profile-menu-in 140ms ease-out;
+  background: #fff;
+  border: 1px solid #e6ece9;
+  border-radius: 14px;
+  box-shadow: 0 16px 40px rgb(22 42 36 / 14%);
+  min-width: 250px;
+  padding: 8px;
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  z-index: 50;
+}
+
+.profile-menu__identity {
+  display: grid;
+  gap: 3px;
+  padding: 10px 11px 12px;
+}
+
+.profile-menu__identity strong {
+  color: #1e293b;
+  font-size: 13px;
+}
+
+.profile-menu__identity span {
+  color: #738078;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.profile-menu__divider {
+  background: #edf1ef;
+  height: 1px;
+  margin: 6px 4px;
+}
+
+.profile-menu__item {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 9px;
+  color: #475569;
+  cursor: pointer;
+  display: flex;
+  font-size: 13px;
+  gap: 10px;
+  min-height: 40px;
+  padding: 0 10px;
+  text-align: left;
+  width: 100%;
+}
+
+.profile-menu__item:not(:disabled):hover {
+  background: #f4f7f6;
+}
+
+.profile-menu__item:disabled {
+  color: #87918c;
+  cursor: not-allowed;
+}
+
+.profile-menu__item--logout {
+  color: #b42318;
+}
+
+.profile-menu__item--logout:hover {
+  background: #fff4f2;
+}
+
+.profile-menu__soon {
+  color: #94a09a;
+  font-size: 10px;
+  margin-left: auto;
+}
+
+@keyframes profile-menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 520px) {
+  .profile-menu__name,
+  .profile-menu__chevron {
+    display: none;
+  }
+
+  .profile-menu__trigger {
+    padding: 3px;
+  }
+}

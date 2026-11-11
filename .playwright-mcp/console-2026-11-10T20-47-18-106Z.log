@@ -1,0 +1,4 @@
+[  658545ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:20871
+[  712642ms] [INFO] Launched external handler for 'mailto:suporte@example.com?subject=Recupera%C3%A7%C3%A3o%20de%20acesso'. @ http://localhost:3000/:1
+[  914609ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:20871
+[ 1426676ms] [ERROR] WebSocket connection to 'ws://localhost:3000/ws' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/static/js/bundle.js:20871
