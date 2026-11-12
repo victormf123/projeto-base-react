@@ -11,7 +11,7 @@ type LoginInputProps = {
   name: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
   trailingAction?: ReactNode;
-  type: 'text' | 'password';
+  type: 'text' | 'email' | 'password';
   value: string;
 };
 

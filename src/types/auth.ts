@@ -5,3 +5,9 @@ export type LoginCredentials = {
 };
 
 export type LoginErrors = Partial<Record<'identifier' | 'password', string>>;
+
+export type RegistrationData = {
+  username: string;
+  email: string;
+  password: string;
+};

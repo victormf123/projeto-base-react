@@ -1,4 +1,5 @@
 import { LockKeyhole } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import LoginForm from '../components/login/LoginForm';
 
 type LoginPageProps = {
@@ -40,6 +41,15 @@ function LoginPage({ onLoginSuccess }: LoginPageProps) {
         </header>
 
         <LoginForm onLoginSuccess={onLoginSuccess} />
+        <p className="mt-6 text-center text-sm text-slate-600">
+          Não possui uma conta?{' '}
+          <Link
+            className="font-semibold text-emerald-800 underline-offset-4 transition hover:text-emerald-950 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2"
+            to="/register"
+          >
+            Cadastre-se
+          </Link>
+        </p>
       </section>
 
       <p className="absolute bottom-4 px-4 text-center text-xs text-slate-400">

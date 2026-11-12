@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { ChevronDown, LogOut, Settings, UserRound } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
 import './ProfileMenu.css';
 
@@ -58,11 +59,15 @@ function ProfileMenu({ user }) {
             <strong>{user?.displayName}</strong>
             <span>{user?.identifier}</span>
           </div>
-          <button className="profile-menu__item" disabled role="menuitem" type="button">
+          <Link
+            className="profile-menu__item"
+            onClick={() => setOpen(false)}
+            role="menuitem"
+            to="/profile"
+          >
             <UserRound aria-hidden="true" size={17} />
             Meu perfil
-            <span className="profile-menu__soon">Em breve</span>
-          </button>
+          </Link>
           <button className="profile-menu__item" disabled role="menuitem" type="button">
             <Settings aria-hidden="true" size={17} />
             Configurações

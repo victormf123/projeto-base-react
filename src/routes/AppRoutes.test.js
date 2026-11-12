@@ -73,3 +73,10 @@ test('shows the dashboard on the home route after successful login', async () =>
   fireEvent.click(screen.getByRole('link', { name: /cadastro de itens/i }));
   expect(await screen.findByRole('heading', { name: 'Cadastro de Itens' })).toBeInTheDocument();
 });
+
+test('protects the profile route from unauthenticated users', async () => {
+  window.history.replaceState({}, '', '/profile');
+  render(<App />);
+
+  expect(await screen.findByRole('heading', { name: 'Boas-vindas de volta' })).toBeInTheDocument();
+});
